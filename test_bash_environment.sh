@@ -1,5 +1,13 @@
 #!/bin/bash
 
+function fail {
+    printf -- '-- FAIL ------------------------\n'
+}
+
+function pass {
+    printf -- '-- OK --------------------------\n'
+}
+ 
 function start_test {
     printf -- '================================\n%s\n' "$*"
 }
@@ -8,9 +16,9 @@ function check {
     printf -- '--------------------------------\ncheck: %s\n' "$*"
     if "$@"
     then
-        printf -- '-- OK --------------------------\n'
+        pass
     else
-        printf -- '-- FAIL ------------------------\n'
+        fail
     fi
 }
 
