@@ -21,5 +21,5 @@ do
 done 2>&1 |  sed '/^real/!d;s/real\s*[[:digit:]]*m\([[:digit:]][[:digit:]]*\).*/\1/;' )
 
 echo >&2 $t
-[[ "$t" == "0" ]] && echo "less than one second" || echo "more than one second"
+[[ "$t" -eq "0" ]] && echo "less than one second" || echo "more than one second"
 
