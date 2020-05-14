@@ -30,6 +30,8 @@ TMP_FLD=$(mktemp -d _runXXXXX)
 
 start_test "loop status check"
 
+sed '/^##/!d' t/t1.sh
+
 t/t1.sh > $TMP_FLD/t1.out
 
 check diff t/t1.expected $TMP_FLD/t1.out 
