@@ -28,13 +28,13 @@ function check {
 
 TMP_FLD=$(mktemp -d _runXXXXX)
 
-start_test "loop status check"
-
-sed '/^##/!d' t/t1.sh
-
-t/t1.sh > $TMP_FLD/t1.out
-
-check diff t/t1.expected $TMP_FLD/t1.out 
+for test in t1 t2
+do
+    start_test t/"$test"
+    sed '/^##/!d' t/"$test".sh
+    t/"$test".sh > $TMP_FLD/$test.out
+    check diff t/"$test".expected $TMP_FLD/"$test".out 
+done
 
 start_test Summary
 if $overall_pass
