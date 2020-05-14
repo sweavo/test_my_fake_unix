@@ -12,5 +12,7 @@ trap exit_handler EXIT
 
 set -e # exit on error
 
-/mnt/c/windows/System32/clip.exe /?
+source paths.source
+
+$SYSTEM32_DIR/clip /? 2>&1
 

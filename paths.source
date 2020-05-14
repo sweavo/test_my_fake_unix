@@ -1,0 +1,15 @@
+# Platform-specific support for the platform tests.  For example, if we want to
+# check whether we can execute Windows programs, we'll need to know the path at
+# which we can find the windows programs.  Take your lead from the linux-gnu 
+# section: duplicate it and update it for your target.
+
+if [[ "X$OSTYPE" == "Xlinux-gnu" ]]
+then
+    SYSTEM32_DIR=/mnt/c/windows/System32/
+fi
+
+if [[ "X$OSTYPE" == "Xmsys" ]]
+else
+    SYSTEM32_DIR=/c/WINDOWS/system32/
+fi
+

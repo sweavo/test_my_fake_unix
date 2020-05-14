@@ -28,8 +28,9 @@ function check {
 
 TMP_FLD=$(mktemp -d _runXXXXX)
 
-for test in t1 t2 t3
+for test_script in $(cd t; ls t*.sh)
 do
+    test=${test_script%.sh} 
     start_test t/"$test"
     sed '/^##/!d' t/"$test".sh
     t/"$test".sh > $TMP_FLD/$test.out
