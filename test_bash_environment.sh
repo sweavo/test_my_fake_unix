@@ -12,7 +12,7 @@ function pass {
 }
  
 function start_test {
-    printf -- '================================\n%s\n' "$*"
+    printf -- '================================\n%s\n--------------------------------\n' "$*"
 }
 
 function check {
