@@ -1,9 +1,6 @@
-# RTE build envrionment tests
+# Fake unix envrionment tests
 
-This is for testing bash environments for the things that RTE team has 
-discovered to be problematic down the years, for example:
-
-* Fake unixes can take a long time to fork()
-* Unix on top of windows can fail to delete files, while reporting success
-
+These scripts check certain aspects of unix-like build environments, in 
+particular, problems I've found with MSys down the years.  This will allow us
+to evaluate alternatives, like cygwin, msys2, wsl, etc.
 
