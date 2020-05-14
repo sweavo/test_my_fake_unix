@@ -15,8 +15,11 @@ trap exit_handler EXIT
 
 set -e # exit on error
 
-time for x in $(seq 1 100)
+t=$(time for x in $(seq 1 10)
 do
     echo 'hello' | sed 's/e/a/;s/o/ee/' >/dev/null
-done
+done 2>&1 |  sed '/^real/!d;s/real\s*[[:digit:]]*m\([[:digit:]][[:digit:]]*\).*/\1/;' )
+
+echo >&2 $t
+[[ "$t" == "0" ]] && echo "less than one second" || echo "more than one second"
 
