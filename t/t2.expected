@@ -1,0 +1,7 @@
+holding
+removing
+rm returned 0
+rewriting
+echo with redirect returned 0
+exit_status 0
+done
