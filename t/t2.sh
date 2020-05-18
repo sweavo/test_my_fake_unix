@@ -1,6 +1,6 @@
 #!/bin/bash
 ## In MSys bash, if you delete a file that another process is holding, windows 
-## will like to MSys that the file is deleted, but then you cannot create a new
+## will lie to MSys that the file is deleted, but then you cannot create a new
 ## file with the same name.
 
 function exit_handler 
