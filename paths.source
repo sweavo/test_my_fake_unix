@@ -5,11 +5,11 @@
 
 if [[ "X$OSTYPE" == "Xlinux-gnu" ]]
 then
-    SYSTEM32_DIR=/mnt/c/windows/System32/
+    SYSTEM32_DIR=/mnt/c/Windows/System32/
 fi
 
 if [[ "X$OSTYPE" == "Xmsys" ]]
-else
+then
     SYSTEM32_DIR=/c/WINDOWS/system32/
 fi
 

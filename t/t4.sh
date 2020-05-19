@@ -14,5 +14,5 @@ set -e # exit on error
 
 source paths.source
 
-$SYSTEM32_DIR/clip /? 2>&1
+${SYSTEM32_DIR}clip.exe /?
 
