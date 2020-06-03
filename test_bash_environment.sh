@@ -33,7 +33,7 @@ do
     test=${test_script%.sh} 
     start_test t/"$test"
     sed '/^##/!d' t/"$test".sh
-    t/"$test".sh > $TMP_FLD/$test.out
+    t/"$test".sh &> $TMP_FLD/$test.out
     check diff t/"$test".expected $TMP_FLD/"$test".out 
 done
 

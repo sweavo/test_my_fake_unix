@@ -1,0 +1,4 @@
+t/t5.sh: line 19: wef: command not found
+outer_bash_got: 127
+exit_status 0
+done
